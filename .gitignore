@@ -1,0 +1,13 @@
+# VSCode
+.vdcode/
+__pycache__/
+
+
+# Model weights
+*.pt
+*.pth
+
+# Videos & Images
+*.mp4
+*.avi
+*.mov
