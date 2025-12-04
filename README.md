@@ -1,16 +1,10 @@
-<<<<<<< HEAD
-
-# Football_Analysis
-
-# Football player detection and multi-object tracking using YOLO and ByteTrack. Supports two-team jersey classification and video export.
-
 # Football Player Tracking using YOLOv8 + ByteTrack
 
 ## Introduction
 
 This project detects and tracks football players using **YOLOv5** for detection and **ByteTrack** for multi-object tracking, then assigns each player into one of two teams based on jersey color clustering.  
 A simple **Streamlit UI** is included for uploading videos and exporting processed results.
-https://drive.google.com/file/d/1InyfaTCkVOM26soxgrzf1Jkw_lUgZGqN/view?usp=sharing
+![result_demo](images/result.png)
 
 ## Features
 
@@ -21,37 +15,31 @@ https://drive.google.com/file/d/1InyfaTCkVOM26soxgrzf1Jkw_lUgZGqN/view?usp=shari
 - Streamlit UI for uploading and processing videos
 - Export processed video with bounding boxes, track IDs and team labels
 
-## Project Structure
-
+```text
 project/
 ├── main.py
 ├── yolo_inference.py
 ├── README.md
 ├── requirements.txt
-│
 ├── input_videos/
 ├── output_videos/
-│
 ├── models/
-│ ├── best.pt
-│
+│   ├── best.pt
 ├── team_assigner/
-│ └── two_team.py
-│
+│   └── two_team.py
 ├── track/
-│ ├── byte_track.py
-│ ├── kalman_filter.py
-│ └── track.py
-│
+│   ├── byte_track.py
+│   ├── kalman_filter.py
+│   └── track.py
 ├── tracking/
-│ └── tracker.py
-│
+│   └── tracker.py
 └── training/
-└── training_yolov5.ipynb
+    └── training_yolov5.ipynb
+```
 
 ## Explanation of the Pipeline
 
-https://drive.google.com/file/d/1McVp9xP9V_LUj34y892MaE0UvY_k6qPH/view?usp=sharing
+![Piprline](images/Pipeline_ByteTrack.png)
 
 1. Detection
    YOLOv5 detects players frame-by-frame and outputs bounding boxes + confidence.
